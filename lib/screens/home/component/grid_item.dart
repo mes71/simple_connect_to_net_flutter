@@ -13,6 +13,10 @@ class GridItem extends StatelessWidget {
       borderRadius: BorderRadius.circular(10),
       child: GridTile(
         child: GestureDetector(
+          onTap: () {
+            Navigator.of(context)
+                .pushNamed(SinglePhotos.routeName, arguments: photo.id);
+          },
           child: Image.network(
             photo.thumbnailUrl!,
             fit: BoxFit.cover,

@@ -24,6 +24,9 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home:const MyHome() ,
+        routes:{
+          SinglePhotos.routeName:(ctx)=> const SinglePhotos(),
+        },
       ),
     );
   }

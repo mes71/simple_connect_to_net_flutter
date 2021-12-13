@@ -1,18 +1,19 @@
 import 'package:flutter/foundation.dart';
 
-class PhotosModel with ChangeNotifier{
+class PhotosModel with ChangeNotifier {
   PhotosModel({
-      int? albumId, 
-      int? id, 
-      String? title, 
-      String? url, 
-      String? thumbnailUrl,}){
+    required int? albumId,
+    required int? id,
+    required String? title,
+    required String? url,
+    required String? thumbnailUrl,
+  }) {
     _albumId = albumId;
     _id = id;
     _title = title;
     _url = url;
     _thumbnailUrl = thumbnailUrl;
-}
+  }
 
   PhotosModel.fromJson(dynamic json) {
     _albumId = json['albumId'];
@@ -21,6 +22,7 @@ class PhotosModel with ChangeNotifier{
     _url = json['url'];
     _thumbnailUrl = json['thumbnailUrl'];
   }
+
   int? _albumId;
   int? _id;
   String? _title;
@@ -28,10 +30,14 @@ class PhotosModel with ChangeNotifier{
   String? _thumbnailUrl;
 
   int? get albumId => _albumId;
-  int? get id => _id;
-  String? get title => _title;
-  String? get url => _url;
-  String? get thumbnailUrl => _thumbnailUrl;
 
+  int? get id => _id;
+
+  String? get title => _title;
+
+  String? get url => _url;
+
+  String? get thumbnailUrl => _thumbnailUrl;
+}
 
 }
